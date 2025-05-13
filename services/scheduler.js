@@ -2,7 +2,7 @@ module.exports = async function sender() {
   const cron = require("node-cron");
   const User = require("../models/User");
   const sendMessage = require("./sendMessage"); // افترض موجود
-
+  const crypto = require('crypto');
 
   // 🕐 جدولة الإرسال
   cron.schedule("0 * * * *", async () => {
